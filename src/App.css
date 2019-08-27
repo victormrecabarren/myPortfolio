@@ -15,16 +15,30 @@
 }
 
 .buttonsContainer {
-  margin: auto;
-  margin-right: 1%
+  margin: auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .headerButton {
-  border-style: none;
-  border: 1px red solid;
-  color: red;
-  font-size: 1em;
-  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  color: rgba(28,79,127, 1);
+  /* background-color: rgba(28,79,127, 1); */
+  font-size: 0.8em;
+  border-radius: 20px;
+  margin: auto 10px;
+  border: 1px solid white;
+}
+
+.btn:hover, .btn-primary:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgba(28,79,127, 1);
+  border: 1px solid rgba(28,79,127, 1);
+  box-sizing: border-box;
 }
 
 .mainComponent {
