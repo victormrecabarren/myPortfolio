@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+import Header from './components/Header'
+import Main from './components/Main'
+import Project from './components/Project'
+
+class App extends Component {
+  state = {
+    projects: [],
+    mode: 'contact',
+  }
+
+  changeDisplay = (mode) => {
+    this.setState({
+      mode: mode
+    })
+  }
+
+  render() {
+    return (
+      <>
+
+      <header className="headerComponent">
+        <Header
+          changeDisplay={this.changeDisplay}
+          mode={this.state.mode}
+         />
       </header>
-    </div>
-  );
+
+      <div className="mainComponent">
+        <Main
+          mode={this.state.mode}
+         />
+      </div>
+
+      <div className="projectsContainer">
+        {
+          this.state.projects.length
+          ?
+          this.state.projects.map(project=>(
+            <Project
+              project={project}
+            />
+          ))
+          : null
+        }
+      </div>
+
+      </>
+    )
+  }
 }
 
-export default App;
+export default App
