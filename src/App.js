@@ -8,7 +8,7 @@ import Project from './components/Project'
 class App extends Component {
   state = {
     projects: [],
-    mode: 'contact',
+    mode: 'portfolio',
   }
 
   changeDisplay = (mode) => {

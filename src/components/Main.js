@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Contact from './Contact'
 import Portfolio from './Portfolio'
+import Console from './Console'
 
 
 class Main extends Component {
@@ -12,12 +13,20 @@ class Main extends Component {
       {
         this.props.mode === 'contact'
         ?
+        <div className="contactComponent">
         <Contact />
+        </div>
         :
-        <Portfolio />
+        <>
+          <div className="portfolioComponent">
+            <Portfolio />
+          </div>
+
+          <div className="console">
+            <Console />
+          </div>
+        </>
       }
-
-
       </>
     )
   }
