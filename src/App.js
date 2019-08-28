@@ -5,6 +5,8 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Project from './components/Project'
 
+import baseURL from './constants.js'
+
 class App extends Component {
   state = {
     projects: [],
@@ -12,21 +14,21 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3000/projects')
+    fetch(baseURL + '/projects')
     .then(res=>res.json())
     .then(projects=>this.setState({
       projects: projects
     }))
     .catch(err=>console.log(err))
-
-    fetch(`https://react-rails-spotify.herokuapp.com/playlists`, {mode:'no-cors'})
-    .then(res=>console.log('woke up spotify'))
-
-    fetch(`https://mycupcakesapi.herokuapp.com/cart_items`, {mode:'no-cors'})
-    .then(res=>console.log('woke up cupcakes'))
-
-    fetch(`https://festivalscheduler.herokuapp.com/CampFlogGnaw/Saturday/Lineup`, {mode:'no-cors'})
-    .then(res=>console.log('woke up scheduler'))
+    //
+    // fetch(`https://react-rails-spotify.herokuapp.com/playlists`, {mode:'no-cors'})
+    // .then(res=>console.log('woke up spotify'))
+    //
+    // fetch(`https://mycupcakesapi.herokuapp.com/cart_items`, {mode:'no-cors'})
+    // .then(res=>console.log('woke up cupcakes'))
+    //
+    // fetch(`https://festivalscheduler.herokuapp.com/CampFlogGnaw/Saturday/Lineup`, {mode:'no-cors'})
+    // .then(res=>console.log('woke up scheduler'))
 
   }
 
@@ -51,6 +53,7 @@ class App extends Component {
         className="mainComponent">
         <Main
           mode={this.state.mode}
+          projects={this.state.projects}
          />
       </div>
 

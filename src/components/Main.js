@@ -23,7 +23,9 @@ class Main extends Component {
           </div>
 
           <div className="console">
-            <Console />
+            <Console
+              projects={this.props.projects}
+             />
           </div>
         </>
       }
