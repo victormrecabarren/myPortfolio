@@ -9,8 +9,6 @@ class Portfolio extends Component {
           <h5>Creating applications and web pages with clean, intuitive UI.</h5>
         </div>
 
-
-
         <div className="displayPicsContainer">
 
           <div className="picsLeft">
