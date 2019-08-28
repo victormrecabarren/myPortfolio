@@ -1,24 +1,27 @@
 import React, { Component } from 'react'
 
-import SideBar from './Sidebar'
-import Display from './Display'
+import Contact from './Contact'
+import Portfolio from './Portfolio'
+
 
 class Main extends Component {
   render() {
     return(
       <>
-      <div className="sideBarComponent">
-        <SideBar />
-      </div>
 
-        <div className="displayComponent">
-          <Display
-            mode={this.props.mode}
-           />
-        </div>
+      {
+        this.props.mode === 'contact'
+        ?
+        <Contact />
+        :
+        <Portfolio />
+      }
+
+
       </>
     )
   }
 }
+
 
 export default Main

@@ -2,11 +2,18 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('/background.png');
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position-y: -90px;
+  background-position-x: -90px;
 }
 
 .headerComponent {
   height: 10vh;
-  width: 100vw;
+  width: 80vw;
+  margin: auto;
   border: 1px solid red;
   box-sizing: border-box;
   display: flex;
@@ -14,8 +21,15 @@
   justify-content: space-between;
 }
 
+.myName {
+  font-size: 2em;
+  margin: auto 3%;
+  font-weight: bolder
+}
+
 .buttonsContainer {
   margin: auto 0;
+  padding: 3%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,10 +39,9 @@
   width: 100px;
   height: 30px;
   background-color: white;
-  color: rgba(28,79,127, 1);
-  /* background-color: rgba(28,79,127, 1); */
+  color: rgba(20,15,45, 1);
   font-size: 0.8em;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: auto 10px;
   border: 1px solid white;
 }
@@ -41,29 +54,13 @@
   box-sizing: border-box;
 }
 
+
 .mainComponent {
+  width: 80vw;
   display: flex;
+  margin: auto;
   flex-direction: row;
   flex: 1;
   border: blue 3px solid;
   box-sizing: border-box;
-}
-
-.sideBarComponent {
-  width: 20vw;
-  box-sizing: border-box;
-  border: 1px solid green;
-}
-
-.displayComponent {
-  width: 80vw;
-  box-sizing: border-box;
-  border: 1px solid yellow;
-}
-
-.rotatedText {
-  transform: rotate(90deg);
-  transform-origin: 20% 40%;
-  padding-left: 30%;
-  width: 50vh;
 }

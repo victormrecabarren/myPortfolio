@@ -28,7 +28,8 @@ class App extends Component {
          />
       </header>
 
-      <div className="mainComponent">
+      <div
+        className="mainComponent">
         <Main
           mode={this.state.mode}
          />
@@ -51,5 +52,7 @@ class App extends Component {
     )
   }
 }
+
+
 
 export default App

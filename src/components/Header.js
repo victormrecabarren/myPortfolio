@@ -5,22 +5,15 @@ class Header extends Component {
     return(
       <>
 
-      <p>Victor Recabarren</p>
-      
+      <p className="myName">Victor Recabarren</p>
+
       <div className="buttonsContainer">
-        <div
-          onClick={() => {
-            this.props.changeDisplay('about')
-          }}
-          style={this.props.mode== 'about' ? styles.active : null}
-          className="headerButton btn btn-primary">
-          <p style={{marginTop: "-1px"}}>About Me</p>
-        </div>
+
         <div
           onClick={() => {
             this.props.changeDisplay('portfolio')
           }}
-          style={this.props.mode== 'portfolio' ? styles.active : null}
+          style={this.props.mode === 'portfolio' ? styles.active : null}
           className="headerButton btn btn-primary">
           <p style={{marginTop: "-1px"}}>Portfolio</p>
         </div>
@@ -28,7 +21,7 @@ class Header extends Component {
           onClick={() => {
             this.props.changeDisplay('contact')
           }}
-          style={this.props.mode== 'contact' ? styles.active : null}
+          style={this.props.mode === 'contact' ? styles.active : null}
           className="headerButton btn btn-primary">
           <p style={{marginTop: "-1px"}}>Contact Me</p>
         </div>
@@ -40,8 +33,8 @@ class Header extends Component {
 
 const styles = {
   active: {
-    backgroundColor: "rgba(28,79,127, 1)",
-    color: "white"
+    backgroundColor: "rgba(20,15,45, 1)",
+    color: "white",
   }
 }
 
