@@ -11,6 +11,10 @@ class App extends Component {
     mode: 'portfolio',
   }
 
+  componentDidMount = () => {
+    
+  }
+
   changeDisplay = (mode) => {
     this.setState({
       mode: mode
@@ -33,19 +37,6 @@ class App extends Component {
         <Main
           mode={this.state.mode}
          />
-      </div>
-
-      <div className="projectsContainer">
-        {
-          this.state.projects.length
-          ?
-          this.state.projects.map(project=>(
-            <Project
-              project={project}
-            />
-          ))
-          : null
-        }
       </div>
 
       </>
