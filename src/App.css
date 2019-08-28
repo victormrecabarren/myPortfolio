@@ -174,5 +174,15 @@
 }
 
 .console {
-  height: 40vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.projectCard {
+  border: 1px red solid;
+  box-sizing: border-box;
+  height: 80%;
+  width: 24%;
 }

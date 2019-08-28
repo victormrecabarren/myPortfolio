@@ -8,7 +8,10 @@ class Console extends Component {
           this.props.projects.length
           ?
           this.props.projects.map(project=>(
-            <p>{project.name}</p>
+
+            <div className="projectCard">
+              <p>{project.name}</p>
+            </div>
           ))
           :
           null
