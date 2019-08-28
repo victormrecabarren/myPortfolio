@@ -12,7 +12,16 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    
+    // this.state.projects.length
+    // ?
+    // null
+    // :
+    fetch('http://localhost:3000/projects')
+    .then(res=>res.json())
+    .then(projects=>this.setState({
+      projects: projects
+    }))
+    .catch(err=>console.log(err))
   }
 
   changeDisplay = (mode) => {
