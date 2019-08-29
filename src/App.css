@@ -64,7 +64,8 @@
   box-sizing: border-box;
   min-height: 800px;
   max-height: 800px;
-  min-width: 1000px
+  min-width: 1000px;
+  max-width: 1000px
 }
 
 
