@@ -19,7 +19,9 @@ class Main extends Component {
         :
         <>
           <div className="portfolioComponent">
-            <Portfolio />
+            <Portfolio
+              projects={this.props.projects}
+             />
           </div>
 
           <div className="console">

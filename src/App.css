@@ -96,7 +96,6 @@
 }
 
 .displayPicsContainer {
-
   flex: 1;
   display: flex;
   flex-direction: row
@@ -109,6 +108,7 @@
 }
 
 .topLeft {
+  display: block;
   flex: 5;
   background-image: url('/scheduler.gif');
   background-size: 102%;
@@ -116,6 +116,7 @@
 }
 
 .bottomLeft {
+  display: block;
   flex: 6;
   background-image: url('/working.jpg');
   background-size: cover;
@@ -123,6 +124,7 @@
 }
 
 .topRight {
+  display: block;
   flex: 12;
   background-image: url('/spotify.gif');
   background-repeat: no-repeat;
@@ -130,6 +132,7 @@
 }
 
 .bottomRight {
+  display: block;
   flex: 23;
   background-image: url('/cupcakes.gif');
   background-repeat: no-repeat;
@@ -181,8 +184,62 @@
 }
 
 .projectCard {
-  border: 1px red solid;
-  box-sizing: border-box;
   height: 80%;
   width: 24%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 10px 0px 100px rgba(200,200,200,0.8);
+  transition: transform .3s;
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+}
+
+.cardIcon {
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.Festival {
+  background-color: rgba(20,15,45, 1);
+  border-radius: 100px;
+  margin: 15% auto 5% auto;
+  height: 40px;
+  width: 40px;
+}
+
+.Spotify {
+  background-color: rgba(20,15,45, 1);
+  border-radius: 100px;
+  margin: 15% auto 5% auto;
+  height: 40px;
+  width: 40px;
+}
+
+.Cupcake {
+  background-color: rgba(255, 240, 231, 1);
+  border-radius: 100px;
+  margin: 15% auto 5% auto;
+  height: 40px;
+  width: 40px;
+
+}
+
+.cardTitle {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: rgba(20,15,45, 1);
+
+}
+
+.cardText {
+  padding-top: 10%;
+  text-align: center;
+  color: rgba(20,15,45, 1);
 }

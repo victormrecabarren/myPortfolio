@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 
 class Console extends Component {
+
+  state = {
+
+  }
+
   render() {
     return(
       <>
@@ -9,9 +14,23 @@ class Console extends Component {
           ?
           this.props.projects.map(project=>(
 
-            <div className="projectCard">
-              <p>{project.name}</p>
+            <div
+              className="projectCard"
+              key={project.id}>
+
+              <div className={project.name}>
+                <img
+                  src={`/${project.icon}`}
+                  alt={project.name}
+                  className="cardIcon"
+                 />
+              </div>
+
+
+              <h2 className="cardTitle">{project.name}</h2>
+              <p className="cardText">Hosted on: {project.front_end_deployed}</p>
             </div>
+
           ))
           :
           null
