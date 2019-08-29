@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ReactPlayer from 'react-player'
+
 import github from '../assets/github.png'
 
 class Project extends Component {
@@ -9,6 +11,7 @@ class Project extends Component {
 
         <div className="projectDescriptionBox">
           <h1 style={{fontWeight: "bolder"}}>{project.name}</h1>
+          <h5>(Prototype: Built during a 1 week sprint)</h5>
 
           <div className="frameworkBox">
             <h6
@@ -46,7 +49,10 @@ class Project extends Component {
           </div>
         </div>
 
-        <a
+
+        {
+          project.clientlink ?
+          <a
           href={project.clientlink}
           target="_blank"
           className="projectImageBox">
@@ -56,6 +62,31 @@ class Project extends Component {
             alt={project.name}
           />
         </a>
+
+        :
+
+        <div className="projectImageBox">
+          {/* <img
+            src={project.screenshot}
+            className="projectScreenshot"
+            alt={project.name}
+          /> */}
+            <ReactPlayer
+               playing
+               controls
+               loop
+               url='https://recabarren-portfolio.s3.amazonaws.com/RPReplay_Final1566668125.mp4'
+               wrapper="span"
+             />
+        </div>
+
+
+
+      }
+
+
+
+
 
       </div>
     )
