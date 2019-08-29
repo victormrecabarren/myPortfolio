@@ -66,11 +66,7 @@ class Project extends Component {
         :
 
         <div className="projectImageBox">
-          {/* <img
-            src={project.screenshot}
-            className="projectScreenshot"
-            alt={project.name}
-          /> */}
+
             <ReactPlayer
                playing
                controls

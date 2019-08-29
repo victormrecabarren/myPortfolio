@@ -24,15 +24,15 @@ class App extends Component {
       projects: projects
     }))
     .catch(err=>console.log(err))
-    //
-    // fetch(`https://react-rails-spotify.herokuapp.com/playlists`, {mode:'no-cors'})
-    // .then(res=>console.log('woke up spotify'))
-    //
-    // fetch(`https://mycupcakesapi.herokuapp.com/cart_items`, {mode:'no-cors'})
-    // .then(res=>console.log('woke up cupcakes'))
-    //
-    // fetch(`https://festivalscheduler.herokuapp.com/CampFlogGnaw/Saturday/Lineup`, {mode:'no-cors'})
-    // .then(res=>console.log('woke up scheduler'))
+  
+    fetch(`https://react-rails-spotify.herokuapp.com/playlists`, {mode:'no-cors'})
+    .then(res=>console.log('woke up spotify'))
+
+    fetch(`https://mycupcakesapi.herokuapp.com/cart_items`, {mode:'no-cors'})
+    .then(res=>console.log('woke up cupcakes'))
+
+    fetch(`https://festivalscheduler.herokuapp.com/CampFlogGnaw/Saturday/Lineup`, {mode:'no-cors'})
+    .then(res=>console.log('woke up scheduler'))
 
   }
 
