@@ -18,15 +18,14 @@ class Portfolio extends Component {
 
           <div className="picsLeft">
 
-            <a
+            <div
               href={this.props.projects.filter(project=> project.name==="Festival Scheduler").map(project=>project.clientlink)}
               className="topLeft pics">
-              <div className="overlay"></div>
-            </a>
+            </div>
 
             <div className="bottomLeft pics">
               <div className="overlayActive">
-                <h3 className="overlayText">browse below to learn more</h3>
+                <h3 className="overlayText">click projects below to learn more</h3>
               </div>
             </div>
 
@@ -34,16 +33,14 @@ class Portfolio extends Component {
 
           <div className="picsRight">
 
-            <a
+            <div
               href={this.props.projects.filter(project=> project.name==="Spotify (Recreated!)").map(project=>project.clientlink)}
               className="topRight pics">
-              <div className="overlay"></div>
-            </a>
+            </div>
 
-            <a className="bottomRight pics">
-              <div className="overlay">
-              </div>
-            </a>
+            <div className="bottomRight pics">
+
+            </div>
 
           </div>
         </div>

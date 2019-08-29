@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 class Header extends Component {
   render(){
@@ -9,22 +10,24 @@ class Header extends Component {
 
       <div className="buttonsContainer">
 
-        <div
+        <Link
+          to="/"
           onClick={() => {
             this.props.changeDisplay('portfolio')
           }}
           style={this.props.mode === 'portfolio' ? styles.active : null}
           className="headerButton btn btn-primary">
           <p style={{marginTop: "-1px"}}>Portfolio</p>
-        </div>
-        <div
+        </Link>
+        <Link
+          to="/"
           onClick={() => {
             this.props.changeDisplay('contact')
           }}
           style={this.props.mode === 'contact' ? styles.active : null}
           className="headerButton btn btn-primary">
           <p style={{marginTop: "-1px"}}>Contact Me</p>
-        </div>
+        </Link>
       </div>
       </>
     )

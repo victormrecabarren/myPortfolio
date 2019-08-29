@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
+import { HashRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import Header from './components/Header'
 import Main from './components/Main'
@@ -11,6 +14,7 @@ class App extends Component {
   state = {
     projects: [],
     mode: 'portfolio',
+    currentProject: '',
   }
 
   componentDidMount = () => {
@@ -38,25 +42,50 @@ class App extends Component {
     })
   }
 
+  setCurrentProject = (project) => {
+    console.log(project)
+  }
+
   render() {
     return (
       <>
+      <HashRouter>
+        <header className="headerComponent">
+          <Header
+            changeDisplay={this.changeDisplay}
+            mode={this.state.mode}
+           />
+        </header>
 
-      <header className="headerComponent">
-        <Header
-          changeDisplay={this.changeDisplay}
-          mode={this.state.mode}
-         />
-      </header>
+          <Route
+            path="/"
+            exact
+            render={(routeProps) => (
+              <div
+                className="mainComponent">
+              <Main
+                {...routeProps}
+                mode={this.state.mode}
+                projects={this.state.projects}
+                setCurrentProject={this.setCurrentProject}
+              />
+            </div>
+            )}
+            />
 
-      <div
-        className="mainComponent">
-        <Main
-          mode={this.state.mode}
-          projects={this.state.projects}
-         />
-      </div>
+            <Route
+              path='/project'
+              exact
+              render={(routeProps) => (
+                <Project
+                  {...routeProps}
+                  project={this.state.currentProject}
+                />
+              )}
+            />
 
+
+      </HashRouter>
       </>
     )
   }

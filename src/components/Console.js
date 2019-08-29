@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-// import moon from './assets/images/moon.png'
+import {Link} from 'react-router-dom'
+
 import moon from '../assets/moon.png'
 import spotify from '../assets/spotify.png'
 import cupcake from '../assets/cupcake.png'
@@ -21,9 +22,14 @@ class Console extends Component {
           ?
           this.props.projects.map(project=>(
 
-            <div
+            <Link
+              to="/project"
               className="projectCard"
-              key={project.id}>
+              key={project.id}
+              onClick={() => {
+                this.props.setCurrentProject(project)
+              }}
+              >
 
               <div className={project.name}>
                 <img
@@ -37,7 +43,7 @@ class Console extends Component {
 
               <h2 className="cardTitle">{project.name}</h2>
               <p className="cardText">Hosted on: {project.front_end_deployed}</p>
-            </div>
+            </Link>
 
           ))
           :
