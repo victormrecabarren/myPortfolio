@@ -26,7 +26,7 @@ class Header extends Component {
           }}
           style={this.props.mode === 'contact' ? styles.active : null}
           className="headerButton btn btn-primary">
-          <p style={{marginTop: "-1px"}}>Contact Me</p>
+          <p style={{marginTop: "-1px", textAlign: "center"}}>About</p>
         </Link>
       </div>
       </>

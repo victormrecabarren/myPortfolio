@@ -43,7 +43,9 @@ class App extends Component {
   }
 
   setCurrentProject = (project) => {
-    console.log(project)
+    this.setState({
+      currentProject: project
+    })
   }
 
   render() {

@@ -73,13 +73,60 @@
 .projectComponent {
   flex: 1;
   margin: auto;
-  min-height: 800px;
-  max-height: 800px;
+  height: 100vh;
+  min-height: 470px;
   min-width: 1000px;
   max-width: 1000px;
-  border: red 1px solid;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
 
+.projectDescriptionBox {
+  width: 50%;
+  margin: auto;
+  padding: 0 10%;
+}
+
+.frameworkBox {
+  font-size: 0.9em;
+  padding: 5% 0;
+}
+
+.projectDescriptionBox > small {
+  display: block;
+  line-height: 25px;
+  margin-bottom: 10%;
+}
+
+.projectDescriptionBox > p {
+  font-weight: bolder;
+  color: rgba(200,200,200,1);
+  margin: 0
+}
+
+.linksBox {
+  margin-top: 5%;
+}
+
+.linksBox > a {
+  display: block;
+}
+
+.projectImageBox {
+  width: 50%;
+  height: 80%;
+  margin: auto;
+  display: block;
+}
+
+.projectScreenshot {
+  height: 100%;
+  padding: auto;
+}
+
+.projectImageBox, .projectScreenshot {
+  display: block;
+  margin: auto;
 }
 
 
@@ -223,7 +270,7 @@
 }
 
 .Festival {
-  background-color: rgba(20,15,45, 1);
+  background-color: rgba(229,79,69, 1);
   border-radius: 100px;
   margin: 15% auto 5% auto;
   height: 40px;
