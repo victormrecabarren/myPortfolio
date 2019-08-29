@@ -89,13 +89,25 @@
 
 .frameworkBox {
   font-size: 0.9em;
-  padding: 5% 0;
+  padding: 5%;
+}
+
+.frameworkText {
+  display: block;
+  font-size: 1em;
+  color: rgba(60,45,135, 1);
 }
 
 .projectDescriptionBox > small {
   display: block;
-  line-height: 25px;
+  padding: 5%;
   margin-bottom: 10%;
+  box-shadow: 10px 0px 100px rgba(200,200,200,0.8);
+  border-radius: 10px;
+
+  line-height: 25px;
+  text-align: left;
+  text-indent: 1em;
 }
 
 .projectDescriptionBox > p {
@@ -110,6 +122,7 @@
 
 .linksBox > a {
   display: block;
+  font-weight: bolder;
 }
 
 .projectImageBox {

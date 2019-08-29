@@ -11,8 +11,16 @@ class Project extends Component {
           <h1 style={{fontWeight: "bolder"}}>{project.name}</h1>
 
           <div className="frameworkBox">
-            <h6 style={{fontWeight: "bolder"}}>Front-end framework: </h6>
-            <h6 style={{fontWeight: "bolder"}}>Back-end framework: </h6>
+            <h6
+              style={{fontWeight: "bolder"}}
+              >
+                Front-end framework: <span className="frameworkText">{project.front_framework}</span>
+              </h6>
+            <h6
+              style={{fontWeight: "bolder"}}
+              >
+                Back-end framework: <span className="frameworkText">{project.back_framework}</span>
+              </h6>
           </div>
 
 
@@ -34,7 +42,7 @@ class Project extends Component {
                   >View Project!</a>
                 :
                 null
-              }  
+              }
           </div>
         </div>
 
