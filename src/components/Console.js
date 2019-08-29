@@ -20,7 +20,7 @@ class Console extends Component {
 
               <div className={project.name}>
                 <img
-                  src={`/${project.icon}`}
+                  src={`/images/${project.icon}`}
                   alt={project.name}
                   className="cardIcon"
                  />
