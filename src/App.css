@@ -111,7 +111,7 @@
 .topLeft {
   display: block;
   flex: 5;
-  background-image: url('/images/scheduler.gif');
+  background-image: url('./assets/scheduler.gif');
   background-size: 102%;
   background-repeat: no-repeat;
 }
@@ -119,7 +119,7 @@
 .bottomLeft {
   display: block;
   flex: 6;
-  background-image: url('/images/working.jpg');
+  background-image: url('./assets/working.jpg');
   background-size: cover;
   background-position: right
 }
@@ -127,7 +127,7 @@
 .topRight {
   display: block;
   flex: 12;
-  background-image: url('/images/spotify.gif');
+  background-image: url('./assets/spotify.gif');
   background-repeat: no-repeat;
   background-size: 103%;
 }
@@ -135,7 +135,7 @@
 .bottomRight {
   display: block;
   flex: 23;
-  background-image: url('/images/cupcakes.gif');
+  background-image: url('./assets/cupcakes.gif');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
