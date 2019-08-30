@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {Link} from 'react-router-dom'
 
 
 class Portfolio extends Component {
@@ -18,10 +18,20 @@ class Portfolio extends Component {
 
           <div className="picsLeft">
 
-            <div
-              href={this.props.projects.filter(project=> project.name==="Festival Scheduler").map(project=>project.clientlink)}
-              className="topLeft pics">
-            </div>
+            {
+              this.props.projects.filter(project=> project.name==="Festival Scheduler").map(project=>
+                <Link
+                  to="/project"
+                  className="topLeft pics"
+                  key={project.id}
+                  onClick={() => {
+                    this.props.setCurrentProject(project)
+                  }}
+                  >
+                  </Link>
+            )}
+
+
 
             <div className="bottomLeft pics">
               <div className="overlayActive">
@@ -33,14 +43,32 @@ class Portfolio extends Component {
 
           <div className="picsRight">
 
-            <div
-              href={this.props.projects.filter(project=> project.name==="Spotify (Recreated!)").map(project=>project.clientlink)}
-              className="topRight pics">
-            </div>
+            {
+              this.props.projects.filter(project=> project.name==="Spotify (Recreated!)").map(project=>
+                <Link
+                  to="/project"
+                  className="topRight pics"
+                  key={project.id}
+                  onClick={() => {
+                    this.props.setCurrentProject(project)
+                  }}
+                  >
+                  </Link>
+            )}
 
-            <div className="bottomRight pics">
+            {
+              this.props.projects.filter(project=> project.name==="Spotify (Recreated!)").map(project=>
+                <Link
+                  to="/project"
+                  className="bottomRight pics"
+                  key={project.id}
+                  onClick={() => {
+                    this.props.setCurrentProject(project)
+                  }}
+                  >
+                  </Link>
+            )}
 
-            </div>
 
           </div>
         </div>

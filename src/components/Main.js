@@ -21,6 +21,7 @@ class Main extends Component {
           <div className="portfolioComponent">
             <Portfolio
               projects={this.props.projects}
+              setCurrentProject={this.props.setCurrentProject}
              />
           </div>
 
