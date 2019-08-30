@@ -4,6 +4,7 @@ import linkedin from '../assets/linkedin.png'
 import github from '../assets/github.png'
 import pdf from '../assets/pdf.png'
 import baltimore from '../assets/baltimore.jpg'
+import resume from '../assets/resume.pdf'
 
 
 class About extends Component {
@@ -34,18 +35,22 @@ class About extends Component {
 
       <div className="aboutMeInfo">
         <div>
-          <h4>View my LinkedIn</h4>
-          <img className="icons" src={linkedin} />
+          <a href="https://www.linkedin.com/in/victor-recabarren/" target="_blank">View my LinkedIn</a>
+          <a href="https://www.linkedin.com/in/victor-recabarren/" target="_blank">
+            <img className="icons" src={linkedin} />
+          </a>
         </div>
         <div>
-          <h4>View my GitHub</h4>
-
-          <img className="icons" src={github} />
+          <a href="https://github.com/victormrecabarren" target="_blank">View my GitHub</a>
+          <a href="https://github.com/victormrecabarren" target="_blank">
+            <img className="icons" src={github} />
+          </a>
         </div>
         <div>
-          <h4>Download my Resume</h4>
-
-          <img className="icons" src={pdf} />
+          <a href={resume} download>Download my Resume</a>
+          <a href={resume} download>
+            <img className="icons" src={pdf} />
+          </a>
         </div>
 
       </div>
