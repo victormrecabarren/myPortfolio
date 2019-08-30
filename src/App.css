@@ -147,6 +147,13 @@
 .projectScreenshot {
   padding: auto;
   height: auto;
+  transition: transform .3s;
+}
+
+.projectScreenshot:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .projectImageBox, .projectScreenshot {
@@ -239,15 +246,17 @@
   filter: brightness(30%)
 } */
 
-.pics:hover > .overlay {
-  width:100%;
-  height:100%;
+
+/* .projectImageBox:hover > .overlay {
+  width:10px;
+  height:10px;
   position:relative;
+  z-index: 5;
   background-color:rgba(20,15,45, 1);
   opacity:0.8;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 
 .overlayActive {
   width:100%;
