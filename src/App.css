@@ -299,6 +299,16 @@
   text-decoration: none;
 }
 
+.arrowDown {
+  height: 20%;
+  border-top: 1px solid rgba(200,200,200,.5)
+}
+
+.downArrowIcon {
+  height: 80%;
+  margin: 0 42%;
+}
+
 .cardIcon {
   height: 30px;
   width: 30px;

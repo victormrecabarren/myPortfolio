@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import moon from '../assets/moon.png'
 import spotify from '../assets/spotify.png'
 import cupcake from '../assets/cupcake.png'
+import downarrow from '../assets/downarrow.png'
 
 class Console extends Component {
 
@@ -43,6 +44,12 @@ class Console extends Component {
 
               <h2 className="cardTitle">{project.name}</h2>
               <p className="cardText">Hosted on: {project.front_end_deployed}</p>
+              <div className="arrowDown">
+                <img
+                  className="downArrowIcon"
+                  alt="down"
+                  src={downarrow} />
+               </div>
             </Link>
 
           ))
