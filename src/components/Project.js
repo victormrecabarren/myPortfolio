@@ -4,6 +4,13 @@ import ReactPlayer from 'react-player'
 import github from '../assets/github.png'
 
 class Project extends Component {
+
+  componentDidMount() {
+    if (this.props.mode !== 'show') {
+      this.props.changeDisplay('show')
+    }
+  }
+
   render() {
     let {project} = this.props
     return(

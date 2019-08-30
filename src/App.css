@@ -24,7 +24,9 @@
 .myName {
   font-size: 2em;
   margin: auto 3%;
-  font-weight: bolder
+  font-weight: bolder;
+  background-color: white;
+  box-shadow: 10px 0 10px white;
 }
 
 .buttonsContainer {
@@ -319,4 +321,34 @@
   padding-top: 10%;
   text-align: center;
   color: rgba(20,15,45, 1);
+}
+
+.aboutComponent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.aboutMePersonal {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: space-between;
+}
+
+.headshotBox {
+  width: 100%;
+  margin: auto;
+  flex: 1
+}
+
+.aboutMeText {
+  flex: 1;
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.aboutMeInfo {
+  width: 50%;
 }

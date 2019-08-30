@@ -1,24 +1,23 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-
-import Contact from './Contact'
 import Portfolio from './Portfolio'
 import Console from './Console'
 
 
 class Main extends Component {
+
+  componentDidMount() {
+    if (this.props.mode !== 'portfolio') {
+      this.props.changeDisplay('portfolio')
+    }
+  }
+
   render() {
     return(
       <>
 
-      {
-        this.props.mode === 'contact'
-        ?
-        <div className="contactComponent">
-        <Contact />
-        </div>
-        :
-        <>
           <div className="portfolioComponent">
             <Portfolio
               projects={this.props.projects}
@@ -31,8 +30,8 @@ class Main extends Component {
               setCurrentProject={this.props.setCurrentProject}
              />
           </div>
-        </>
-      }
+
+
     </>
     )
   }

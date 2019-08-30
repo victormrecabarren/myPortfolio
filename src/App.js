@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
 import Header from './components/Header'
+import About from './components/About'
 import Main from './components/Main'
 import Project from './components/Project'
 
@@ -24,15 +25,15 @@ class App extends Component {
       projects: projects
     }))
     .catch(err=>console.log(err))
-  
-    fetch(`https://react-rails-spotify.herokuapp.com/playlists`, {mode:'no-cors'})
-    .then(res=>console.log('woke up spotify'))
 
-    fetch(`https://mycupcakesapi.herokuapp.com/cart_items`, {mode:'no-cors'})
-    .then(res=>console.log('woke up cupcakes'))
-
-    fetch(`https://festivalscheduler.herokuapp.com/CampFlogGnaw/Saturday/Lineup`, {mode:'no-cors'})
-    .then(res=>console.log('woke up scheduler'))
+    // fetch(`https://react-rails-spotify.herokuapp.com/playlists`, {mode:'no-cors'})
+    // .then(res=>console.log('woke up spotify'))
+    //
+    // fetch(`https://mycupcakesapi.herokuapp.com/cart_items`, {mode:'no-cors'})
+    // .then(res=>console.log('woke up cupcakes'))
+    //
+    // fetch(`https://festivalscheduler.herokuapp.com/CampFlogGnaw/Saturday/Lineup`, {mode:'no-cors'})
+    // .then(res=>console.log('woke up scheduler'))
 
   }
 
@@ -44,7 +45,8 @@ class App extends Component {
 
   setCurrentProject = (project) => {
     this.setState({
-      currentProject: project
+      currentProject: project,
+      mode: 'show'
     })
   }
 
@@ -70,6 +72,7 @@ class App extends Component {
                 mode={this.state.mode}
                 projects={this.state.projects}
                 setCurrentProject={this.setCurrentProject}
+                changeDisplay={this.changeDisplay}
               />
             </div>
             )}
@@ -82,8 +85,15 @@ class App extends Component {
                 <Project
                   {...routeProps}
                   project={this.state.currentProject}
+                  mode={this.state.mode}
+                  changeDisplay={this.changeDisplay}
                 />
               )}
+            />
+
+            <Route
+              path="/about"
+              component={About}
             />
 
 

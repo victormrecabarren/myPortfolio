@@ -20,11 +20,11 @@ class Header extends Component {
           <p style={{marginTop: "-1px"}}>Portfolio</p>
         </Link>
         <Link
-          to="/"
+          to="/about"
           onClick={() => {
-            this.props.changeDisplay('contact')
+            this.props.changeDisplay('about')
           }}
-          style={this.props.mode === 'contact' ? styles.active : null}
+          style={this.props.mode === 'about' ? styles.active : null}
           className="headerButton btn btn-primary">
           <p style={{marginTop: "-1px", textAlign: "center"}}>About</p>
         </Link>
