@@ -79,7 +79,6 @@ class Project extends Component {
             className="projectScreenshot"
             alt={project.name}
           />
-          <div className="overlay"></div>
         </a>
 
         :

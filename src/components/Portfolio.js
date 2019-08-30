@@ -57,7 +57,7 @@ class Portfolio extends Component {
             )}
 
             {
-              this.props.projects.filter(project=> project.name==="Spotify (Recreated!)").map(project=>
+              this.props.projects.filter(project=> project.name==="Cupcake Shop").map(project=>
                 <Link
                   to="/project"
                   className="bottomRight pics"
@@ -68,6 +68,7 @@ class Portfolio extends Component {
                   >
                   </Link>
             )}
+
 
 
           </div>
