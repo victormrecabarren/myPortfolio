@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import ReactPlayer from 'react-player'
+import {Link} from 'react-router-dom'
+
 
 import github from '../assets/github.png'
 
@@ -17,7 +19,16 @@ class Project extends Component {
       <div className="projectComponent">
 
         <div className="projectDescriptionBox">
-          <h1 style={{fontWeight: "bolder"}}>{project.name}</h1>
+          <h1 style={{fontWeight: "bolder"}}>
+          <span className="backButton">
+          <Link
+            to="/"
+          >
+          &lt;       
+          </Link></span>
+          {project.name}
+          </h1>
+
           <h5>(Prototype: Built during a 1 week sprint)</h5>
 
           <div className="frameworkBox">
