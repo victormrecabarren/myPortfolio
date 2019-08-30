@@ -135,13 +135,15 @@
 }
 
 .projectScreenshot {
-  height: 100%;
   padding: auto;
+  height: auto;
 }
 
 .projectImageBox, .projectScreenshot {
   display: block;
   margin: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 

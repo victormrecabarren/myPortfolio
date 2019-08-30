@@ -72,7 +72,9 @@ class Project extends Component {
 
         :
 
-        <div className="projectImageBox">
+        <div
+        style={{height: "80%"}}
+        className="projectImageBox">
 
             <ReactPlayer
                playing
