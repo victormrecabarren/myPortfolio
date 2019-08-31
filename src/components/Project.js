@@ -19,13 +19,13 @@ class Project extends Component {
       <div className="projectComponent">
 
         <div className="projectDescriptionBox">
-          <h1 style={{fontWeight: "bolder"}}>
           <span className="backButton">
           <Link
             to="/"
           >
-          &lt;
+          &lt; back
           </Link></span>
+          <h1 style={{fontWeight: "bolder", textIndent: "0"}}>
           {project.name}
           </h1>
 
@@ -54,16 +54,6 @@ class Project extends Component {
               href={project.repolink}
               target="_blank"
               >Github Repo</a>
-              {
-                project.clientlink
-                ?
-                <a
-                  href={project.clientlink}
-                  target="_blank"
-                  >View Project!</a>
-                :
-                null
-              }
           </div>
         </div>
 
@@ -73,7 +63,9 @@ class Project extends Component {
           <a
           href={project.clientlink}
           target="_blank"
-          className="projectImageBox">
+          className="projectImageBox"
+          >
+          <h2 style={{textAlign: "center", padding: "5%"}}>Launch App</h2>
           <img
             src={project.screenshot}
             className="projectScreenshot"

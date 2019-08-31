@@ -34,9 +34,11 @@ class Portfolio extends Component {
 
 
             <div className="bottomLeft pics">
-              <div className="overlayActive">
-                <h3 className="overlayText">click projects below to learn more</h3>
-              </div>
+              <a
+                href="https://github.com/victormrecabarren"
+                className="overlayActive">
+                <h3 className="overlayText">View my GitHub!</h3>
+              </a>
             </div>
 
           </div>

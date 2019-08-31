@@ -33,15 +33,16 @@ class About extends Component {
         </div>
       </div>
 
-      <div className="aboutMeInfo">
+      <div className="contactInfo">
         <div>
-          <a href="https://www.linkedin.com/in/victor-recabarren/" target="_blank">View my LinkedIn</a>
+          <div className="contactHeader"><h3>Contact</h3></div>
+          <a href="https://www.linkedin.com/in/victor-recabarren/" target="_blank"> LinkedIn</a>
           <a href="https://www.linkedin.com/in/victor-recabarren/" target="_blank">
             <img className="icons" src={linkedin} />
           </a>
         </div>
         <div>
-          <a href="https://github.com/victormrecabarren" target="_blank">View my GitHub</a>
+          <a href="https://github.com/victormrecabarren" target="_blank">GitHub</a>
           <a href="https://github.com/victormrecabarren" target="_blank">
             <img className="icons" src={github} />
           </a>
@@ -52,6 +53,7 @@ class About extends Component {
             <img className="icons" src={pdf} />
           </a>
         </div>
+        <h4 style={{textAlign: "center"}}></h4>
 
       </div>
 
