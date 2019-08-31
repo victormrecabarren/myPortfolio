@@ -11,6 +11,8 @@ import Project from './components/Project'
 
 import baseURL from './constants.js'
 
+import projects from './assets/projects'
+
 class App extends Component {
   state = {
     projects: [],
@@ -19,12 +21,18 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    fetch(baseURL + '/projects')
-    .then(res=>res.json())
-    .then(projects=>this.setState({
-      projects: projects
-    }))
-    .catch(err=>console.log(err))
+    // fetch(baseURL + '/projects')
+    // .then(res=>res.json())
+    // .then(projects=>this.setState({
+    //   projects: projects
+    // }))
+    // .catch(err=>console.log(err))
+
+    if (!this.state.projects.length) {
+      this.setState({
+        projects: projects
+      })
+    }
 
     fetch(`https://react-rails-spotify.herokuapp.com/playlists`, {mode:'no-cors'})
     .then(res=>console.log('woke up spotify'))

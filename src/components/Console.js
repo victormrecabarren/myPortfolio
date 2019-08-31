@@ -19,8 +19,7 @@ class Console extends Component {
     return(
       <>
         {
-          this.props.projects.length
-          ?
+
           this.props.projects.map(project=>(
 
             <Link
@@ -53,8 +52,7 @@ class Console extends Component {
             </Link>
 
           ))
-          :
-          null
+
 
         }
       </>
