@@ -1,5 +1,5 @@
 #root {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
@@ -297,6 +297,7 @@ a:hover {
 
 .projectCard {
   height: 80%;
+  max-height: 230px;
   width: 24%;
   border-radius: 10px;
   display: flex;
@@ -370,8 +371,8 @@ a:hover {
 
 .aboutComponent {
   display: flex;
-  flex-direction: row;
-  height: 100vh;
+  flex-direction: column;
+  height: 100%;
   background-image: url('./assets/baltimore.jpg');
   background-position: bottom right;
   background-size: 50%;
@@ -379,28 +380,68 @@ a:hover {
 }
 
 .aboutMePersonal {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 10px 0px 100px rgba(200,200,200,0.8);
+
   display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .headshotBox {
-  width: 70%;
+  width: 40%;
   margin: auto;
-  flex: 1
+}
+
+#myPicture {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .aboutMeText {
-  flex: 1;
-  margin: 5% auto 0;
+  margin: 5% auto;
   display: block;
-  width: 80%;
+  width: 40%;
   text-indent: 2em;
 }
 
-.skills {
-  margin-top: 5%;
+.moreInfo {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.skillsBox {
+  margin: 5% auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column
+}
+
+.skillsHeader {
+  width: 80%;
+  padding: 5%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bolder;
+  border-bottom: rgba(200,200,200,0.7) solid 1px;
+}
+
+.skillsTable {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skillsLine {
+  display: inline-block;
+  width: 30%;
   font-weight: bolder;
   text-align: center;
   font-size: 1em;
@@ -408,31 +449,55 @@ a:hover {
 }
 
 .contactInfo {
+  margin: 5% auto;
   width: 50%;
-  margin-top: 0;
   display: flex;
   flex-direction: column;
 }
 
 .contactHeader {
-  margin: 10%;
-  text-decoration: underline;
+  width: 80%;
+  padding: 5%;
+  margin: 0 auto;
+  border-bottom: rgba(200,200,200,0.7) solid 1px;
+  text-align: center;
+  font-weight: bolder;
 }
 
-.contactHeader > h3{
-  line-height: 10px;
+.contactTable {
+  display: flex;
+  width: 100%;
+  padding: 5%;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
-.contactInfo > div {
-  text-align: right;
-  padding: 2% 10%;
-}
-
-.contactInfo > div > a {
-  display: inline;
-  margin-right: 10%;
+.contactLine {
+  display: inline-block;
+  width: 30%;
+  padding: 5% 0;
+  margin: 0 auto;
+  font-weight: bolder;
+  text-align: left;
+  font-size: 1.5em;
+  text-indent: 0;
   color: black;
 }
+
+.contactLinks {
+  padding-left: 5%;
+}
+
+.contactLine > a {
+  color: black;
+  width: 100%;
+}
+
+.contactLine > a:hover {
+  opacity: 0.5
+}
+
+
 
 .icons {
   width: 30px;
