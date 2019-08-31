@@ -36,6 +36,7 @@ class Portfolio extends Component {
             <div className="bottomLeft pics">
               <a
                 href="https://github.com/victormrecabarren"
+                target="_blank"
                 className="overlayActive">
                 <h3 className="overlayText">View my GitHub!</h3>
               </a>
