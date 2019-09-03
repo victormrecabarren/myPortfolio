@@ -11,8 +11,9 @@ import resume from '../assets/resume.pdf'
 class About extends Component {
   state = {
     skills: ["ReactJS", "jQuery", "Javascript", "NodeJS", "Ruby", "Rails", "REST", "Git", "GitHub", "MongoDB", "Mongoose", "Express", "postgreSQL", "SQL", "HTML5", "CSS"],
-
   }
+
+
   render(){
     return(
       <div className="aboutComponent">
@@ -24,7 +25,8 @@ class About extends Component {
               src={me}
               alt="Victor Recabarren" />
           </div>
-          <div className="aboutMeText">
+          <div className="aboutMeText"
+            >
             I am an inquisitive, endlessly curious software engineer motivated by social justice and a desire to put plans into action. I have a passion for learning new information, new approaches, and new frameworks of thinking in order to find deep insights when faced with new problems. I see myself as a lifelong student, and my professional journey through military hospitals, mortgage companies, and law firms have been proxies for me to continuously build my education and add to my problem-solving toolbox.
 
         </div>

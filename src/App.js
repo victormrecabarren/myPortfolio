@@ -4,6 +4,7 @@ import { HashRouter } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
+
 import Header from './components/Header'
 import About from './components/About'
 import Main from './components/Main'
@@ -59,6 +60,9 @@ class App extends Component {
   }
 
   render() {
+
+    const timeout = { enter: 800, exit: 400 }
+
     return (
       <>
       <HashRouter>
@@ -106,7 +110,7 @@ class App extends Component {
 
 
       </HashRouter>
-      </>
+    </>
     )
   }
 }
