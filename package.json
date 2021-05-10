@@ -5,7 +5,7 @@
   "homepage": "https://victormrecabarren.github.io/myPortfolio/",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mixin-deep": "^2.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
